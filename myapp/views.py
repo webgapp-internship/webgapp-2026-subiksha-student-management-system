@@ -49,6 +49,15 @@ def update_student(request, id):
         return redirect('result')
 
     return render(request, 'update.html', {'student': student})
+def delete(request, id):
+
+    student = get_object_or_404(Student, id=id)
+
+    student.delete()
+
+    return redirect('result')
+
+
 
 
 # ---------------- STATIC PAGES ----------------
