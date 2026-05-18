@@ -1,0 +1,328 @@
+{% load static %}
+<html>
+
+<head>
+    <title>Table Page</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body  
+background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEyz2TyF2z1EObTmHXPe01MlPyrZp-4PJB-w&s"
+style="background-size: cover; background-repeat: no-repeat;">
+
+<center>
+
+<a href="{% url 'home' %}" style="margin-right:15px;">Home</a>
+
+<a href="{% url 'about' %}" style="margin-right:15px;">About</a>
+
+<a href="{% url 'contact' %}" style="margin-right:15px;">Contact</a>
+
+<a href="{% url 'services' %}" style="margin-right:15px;">Services</a>
+
+<a href="{% url 'testing' %}" style="margin-left:20px;">Testing</a>
+
+
+   <h1>Student Records</h1>
+
+
+
+<table>
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Phone</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Color</th>
+        <th>Photo</th>
+        <th>Time</th>
+        <th>Website</th>
+        <th>Course</th>
+        <th>Skills</th>
+        <th>Address</th>
+    </tr>
+
+<tr>
+    <td>1</td>
+    <td>Chanthiralega</td>
+    <td>lega@gmail.com</td>
+    <td>lega123</td>
+    <td>9876543210</td>
+    <td>12-05-2004</td>
+    <td>Female</td>
+    <td>CSE</td>
+    <td>Blue</td>
+    <td>photo1.jpg</td>
+    <td>09:00 AM</td>
+    <td>www.lega.com</td>
+    <td>Python</td>
+    <td>HTML, Django</td>
+    <td>Madurai</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Arun</td>
+    <td>arun@gmail.com</td>
+    <td>arun456</td>
+    <td>9123456780</td>
+    <td>18-07-2003</td>
+    <td>Male</td>
+    <td>IT</td>
+    <td>Red</td>
+    <td>photo2.jpg</td>
+    <td>10:00 AM</td>
+    <td>www.arun.com</td>
+    <td>Java</td>
+    <td>Python, HTML</td>
+    <td>Chennai</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Kavi</td>
+    <td>kavi@gmail.com</td>
+    <td>kavi789</td>
+    <td>9012345678</td>
+    <td>22-11-2002</td>
+    <td>Female</td>
+    <td>ECE</td>
+    <td>Green</td>
+    <td>photo3.jpg</td>
+    <td>11:30 AM</td>
+    <td>www.kavi.com</td>
+    <td>Django</td>
+    <td>Java, CSS</td>
+    <td>Trichy</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Priya</td>
+    <td>priya@gmail.com</td>
+    <td>priya111</td>
+    <td>9090909090</td>
+    <td>15-03-2004</td>
+    <td>Female</td>
+    <td>EEE</td>
+    <td>Pink</td>
+    <td>photo4.jpg</td>
+    <td>01:00 PM</td>
+    <td>www.priya.com</td>
+    <td>HTML</td>
+    <td>Python, Java</td>
+    <td>Coimbatore</td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>Rahul</td>
+    <td>rahul@gmail.com</td>
+    <td>rahul222</td>
+    <td>9345678901</td>
+    <td>09-09-2001</td>
+    <td>Male</td>
+    <td>MECH</td>
+    <td>Yellow</td>
+    <td>photo5.jpg</td>
+    <td>02:30 PM</td>
+    <td>www.rahul.com</td>
+    <td>Web Design</td>
+    <td>HTML, CSS</td>
+    <td>Salem</td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Vijay</td>
+    <td>vijay@gmail.com</td>
+    <td>vijay333</td>
+    <td>9871234560</td>
+    <td>14-02-2000</td>
+    <td>Male</td>
+    <td>CIVIL</td>
+    <td>Orange</td>
+    <td>photo6.jpg</td>
+    <td>03:00 PM</td>
+    <td>www.vijay.com</td>
+    <td>Python</td>
+    <td>Django, HTML</td>
+    <td>Erode</td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>Anu</td>
+    <td>anu@gmail.com</td>
+    <td>anu444</td>
+    <td>9786543210</td>
+    <td>10-10-2003</td>
+    <td>Female</td>
+    <td>BIO TECH</td>
+    <td>Purple</td>
+    <td>photo7.jpg</td>
+    <td>09:45 AM</td>
+    <td>www.anu.com</td>
+    <td>Java</td>
+    <td>CSS, HTML</td>
+    <td>Madurai</td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td>Suresh</td>
+    <td>suresh@gmail.com</td>
+    <td>suresh555</td>
+    <td>9654321870</td>
+    <td>07-01-2002</td>
+    <td>Male</td>
+    <td>ECE</td>
+    <td>Black</td>
+    <td>photo8.jpg</td>
+    <td>12:15 PM</td>
+    <td>www.suresh.com</td>
+    <td>Django</td>
+    <td>Python, SQL</td>
+    <td>Tirunelveli</td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td>Meena</td>
+    <td>meena@gmail.com</td>
+    <td>meena666</td>
+    <td>9567812340</td>
+    <td>28-08-2004</td>
+    <td>Female</td>
+    <td>IT</td>
+    <td>White</td>
+    <td>photo9.jpg</td>
+    <td>10:45 AM</td>
+    <td>www.meena.com</td>
+    <td>HTML</td>
+    <td>CSS, Bootstrap</td>
+    <td>Karur</td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td>Karthik</td>
+    <td>karthik@gmail.com</td>
+    <td>karthik777</td>
+    <td>9445566778</td>
+    <td>17-06-2001</td>
+    <td>Male</td>
+    <td>CSE</td>
+    <td>Gray</td>
+    <td>photo10.jpg</td>
+    <td>04:00 PM</td>
+    <td>www.karthik.com</td>
+    <td>Python</td>
+    <td>Java, Django</td>
+    <td>Namakkal</td>
+</tr>
+
+<tr>
+    <td>11</td>
+    <td>Divya</td>
+    <td>divya@gmail.com</td>
+    <td>divya888</td>
+    <td>9332211445</td>
+    <td>11-12-2000</td>
+    <td>Female</td>
+    <td>EEE</td>
+    <td>Sky Blue</td>
+    <td>photo11.jpg</td>
+    <td>08:30 AM</td>
+    <td>www.divya.com</td>
+    <td>SQL</td>
+    <td>Python, HTML</td>
+    <td>Dindigul</td>
+</tr>
+
+<tr>
+    <td>12</td>
+    <td>Ajay</td>
+    <td>ajay@gmail.com</td>
+    <td>ajay999</td>
+    <td>9223344556</td>
+    <td>19-04-2003</td>
+    <td>Male</td>
+    <td>MECH</td>
+    <td>Brown</td>
+    <td>photo12.jpg</td>
+    <td>05:00 PM</td>
+    <td>www.ajay.com</td>
+    <td>Java</td>
+    <td>HTML, CSS</td>
+    <td>Thoothukudi</td>
+</tr>
+
+<tr>
+    <td>13</td>
+    <td>Nila</td>
+    <td>nila@gmail.com</td>
+    <td>nila101</td>
+    <td>9112233445</td>
+    <td>30-09-2002</td>
+    <td>Female</td>
+    <td>IT</td>
+    <td>Violet</td>
+    <td>photo13.jpg</td>
+    <td>01:45 PM</td>
+    <td>www.nila.com</td>
+    <td>Web Design</td>
+    <td>HTML, JavaScript</td>
+    <td>Sivakasi</td>
+</tr>
+
+<tr>
+    <td>14</td>
+    <td>Ramesh</td>
+    <td>ramesh@gmail.com</td>
+    <td>ramesh202</td>
+    <td>9001122334</td>
+    <td>25-05-2001</td>
+    <td>Male</td>
+    <td>CIVIL</td>
+    <td>Dark Green</td>
+    <td>photo14.jpg</td>
+    <td>11:00 AM</td>
+    <td>www.ramesh.com</td>
+    <td>Django</td>
+    <td>Python, Bootstrap</td>
+    <td>Virudhunagar</td>
+</tr>
+
+<tr>
+    <td>15</td>
+    <td>Keerthi</td>
+    <td>keerthi@gmail.com</td>
+    <td>keerthi303</td>
+    <td>9898989898</td>
+    <td>08-08-2004</td>
+    <td>Female</td>
+    <td>CSE</td>
+    <td>Gold</td>
+    <td>photo15.jpg</td>
+    <td>02:15 PM</td>
+    <td>www.keerthi.com</td>
+    <td>Python</td>
+    <td>Django, SQL</td>
+    <td>Madurai</td>
+</tr>
+
+</table>
+
+<br><br>
+
+</center>
+
+</body>
+
+</html>

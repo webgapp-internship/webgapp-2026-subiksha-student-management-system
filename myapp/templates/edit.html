@@ -1,0 +1,23 @@
+<body style="background-color:#f2f6ff;">
+
+<h2 style="text-align:center;">Update Student</h2>
+
+<div style="display:flex; justify-content:center; margin-top:50px;">
+    <form method="POST" style="border:1px solid black; padding:20px; width:300px; background-color:white;">
+        {% csrf_token %}
+
+        Name:
+        <input name="name" value="{{ student.name }}"><br><br>
+
+        Email:
+        <input name="email" value="{{ student.email }}"><br><br>
+
+        Password:
+        <input name="password" value="{{ student.password }}"><br><br>
+
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+</body>

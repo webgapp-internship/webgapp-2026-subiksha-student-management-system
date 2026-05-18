@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Testing Page</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+      <nav align="center">
+
+         <a href="{% url 'home' %}">Home</a>
+
+         <a href="{% url 'about' %}" style="margin-right:15px;">About</a>
+
+         <a href="{% url 'contact' %}" style="margin-right:15px;">Contact</a>
+
+         <a href="{% url 'tablepage' %}" style="margin-left:20px;">Table Page</a>
+
+         <a href="{% url 'services' %}" style="margin-left:20px;">Services</a>
+
+      </nav>
+
+    <div class="main">
+
+        <img src="{% static 'images/like.jpg' %}" width="200">
+
+        <h1>Welcome to Testing Page</h1>
+
+        <p>This page is connected with external CSS file.</p>
+
+        <button>Click Here</button>
+
+    </div>
+
+</body>
+
+</html>

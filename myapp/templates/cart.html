@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IPL Cart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins;
+}
+
+body{
+  color:white;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,215,0,0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(0,140,255,0.15), transparent 40%),
+    linear-gradient(135deg,#05060a,#0b0f1a);
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav h2{
+  color:#facc15;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+}
+
+/* CART WRAPPER */
+.cart-container{
+  max-width:800px;
+  margin:50px auto;
+  padding:20px;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+/* ITEM CARD */
+.item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  margin-bottom:15px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.item:hover{
+  transform:scale(1.02);
+}
+
+/* LEFT SIDE */
+.item-info{
+  display:flex;
+  flex-direction:column;
+}
+
+.item-info span{
+  opacity:0.8;
+}
+
+/* BUTTONS */
+.btn{
+  padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  margin-left:5px;
+}
+
+.remove{
+  background:#ff4d4d;
+  color:white;
+}
+
+.add{
+  background:#facc15;
+  color:black;
+}
+
+/* TOTAL BOX */
+.total-box{
+  margin-top:30px;
+  padding:20px;
+  background:rgba(255,255,255,0.1);
+  border-radius:15px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+}
+
+.total-box h2{
+  color:#facc15;
+}
+
+/* CHECKOUT */
+.checkout{
+  margin-top:15px;
+  background:#facc15;
+  border:none;
+  padding:10px 20px;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>🛒 IPL CART</h2>
+  <a href="sports.html">⬅ Back Shop</a>
+</nav>
+
+<!-- CART -->
+<div class="cart-container">
+
+  <div class="title">Your Jersey Cart</div>
+
+  <!-- ITEM 1 -->
+  <div class="item">
+    <div class="item-info">
+      <h3>CSK Jersey</h3>
+      <span>₹799</span>
+    </div>
+
+    <div>
+      <button class="btn add">+</button>
+      <button class="btn remove">Remove</button>
+    </div>
+  </div>
+
+  <!-- ITEM 2 -->
+  <div class="item">
+    <div class="item-info">
+      <h3>MI Jersey</h3>
+      <span>₹799</span>
+    </div>
+
+    <div>
+      <button class="btn add">+</button>
+      <button class="btn remove">Remove</button>
+    </div>
+  </div>
+
+  <!-- ITEM 3 -->
+  <div class="item">
+    <div class="item-info">
+      <h3>RCB Jersey</h3>
+      <span>₹799</span>
+    </div>
+
+    <div>
+      <button class="btn add">+</button>
+      <button class="btn remove">Remove</button>
+    </div>
+  </div>
+
+  <!-- TOTAL -->
+  <div class="total-box">
+    <h2>Total: ₹2397</h2>
+    <button class="checkout">Proceed to Checkout 🏏</button>
+  </div>
+
+</div>
+
+</body>
+</html>

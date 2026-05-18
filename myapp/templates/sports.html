@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IPL LIVE SCORE DASHBOARD</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:
+  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+  url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=80");
+
+  background-size:cover;
+  background-attachment:fixed;
+
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 40px;
+
+  background:rgba(0,0,0,0.55);
+
+  backdrop-filter:blur(15px);
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  color:#ffd700;
+}
+
+/* LIVE BADGE */
+
+.live-badge{
+  background:red;
+
+  padding:10px 18px;
+
+  border-radius:30px;
+
+  font-weight:bold;
+
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  50%{
+    opacity:0.4;
+  }
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero h1{
+  font-size:55px;
+  color:#ffd700;
+}
+
+.hero p{
+  margin-top:10px;
+  opacity:0.8;
+}
+
+/* SEARCH */
+
+.search-box{
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+}
+
+.search-box input{
+  width:60%;
+  padding:14px;
+
+  border:none;
+  outline:none;
+
+  border-radius:14px;
+
+  background:rgba(255,255,255,0.12);
+
+  color:white;
+}
+
+/* LIVE MATCH */
+
+.live-card{
+  width:88%;
+  margin:25px auto;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(15px);
+}
+
+.live-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:red;
+  font-weight:bold;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+
+  background:red;
+
+  border-radius:50%;
+
+  animation:blink 1s infinite;
+}
+
+/* MATCH */
+
+.match{
+  text-align:center;
+  margin-top:20px;
+}
+
+.match h2{
+  font-size:38px;
+  color:#ffd700;
+}
+
+.score{
+  margin-top:15px;
+
+  font-size:60px;
+
+  font-weight:bold;
+
+  color:#ffd700;
+}
+
+.required{
+  margin-top:20px;
+
+  text-align:center;
+
+  color:#00ff99;
+
+  font-size:20px;
+}
+
+/* COMMENTARY */
+
+.comment-box{
+  width:88%;
+  margin:30px auto;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+}
+
+.comment-title{
+  text-align:center;
+
+  color:#ffd700;
+
+  margin-bottom:20px;
+}
+
+.comments{
+  max-height:280px;
+
+  overflow-y:auto;
+}
+
+.comments p{
+  padding:14px;
+
+  margin-bottom:12px;
+
+  background:rgba(255,255,255,0.06);
+
+  border-left:4px solid #ffd700;
+
+  border-radius:10px;
+}
+
+/* POPULAR TEAMS */
+
+.section-title{
+  text-align:center;
+
+  margin:40px 0 20px;
+
+  color:#ffd700;
+
+  font-size:34px;
+}
+
+.shop{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:25px;
+
+  padding:20px 40px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+
+  padding:25px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  backdrop-filter:blur(15px);
+
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 0 20px rgba(255,215,0,0.4);
+}
+
+.card img{
+  width:140px;
+
+  height:140px;
+
+  object-fit:contain;
+
+  margin:auto;
+
+  display:block;
+}
+
+.card h3{
+  margin-top:15px;
+
+  color:#ffd700;
+}
+
+.rating{
+  margin-top:10px;
+
+  color:#ffd700;
+
+  font-size:18px;
+
+  font-weight:bold;
+}
+
+/* POINTS TABLE */
+
+.points{
+  width:88%;
+  margin:40px auto;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+}
+
+.points h2{
+  text-align:center;
+
+  color:#ffd700;
+
+  margin-bottom:20px;
+}
+
+table{
+  width:100%;
+
+  border-collapse:collapse;
+
+  text-align:center;
+}
+
+th,td{
+  padding:15px;
+}
+
+th{
+  color:#ffd700;
+}
+
+tr{
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.leader{
+  background:rgba(255,215,0,0.15);
+}
+
+/* POLL */
+
+.poll{
+  width:88%;
+  margin:35px auto;
+
+  padding:25px;
+
+  text-align:center;
+
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.08);
+}
+
+.poll button{
+  padding:12px 22px;
+
+  margin:10px;
+
+  border:none;
+
+  border-radius:10px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+}
+
+.csk{
+  background:#ffd700;
+}
+
+.rcb{
+  background:red;
+  color:white;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+
+  bottom:20px;
+  right:20px;
+
+  background:#25D366;
+
+  color:white;
+
+  text-decoration:none;
+
+  padding:14px 20px;
+
+  border-radius:50px;
+
+  font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:40px;
+
+  text-align:center;
+
+  padding:25px;
+
+  background:rgba(0,0,0,0.8);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    🏏 IPL LIVE
+  </div>
+
+  <div class="live-badge">
+    🔴 LIVE
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+  <h1>IPL LIVE SCORE DASHBOARD</h1>
+
+  <p>
+    Live Match • Commentary • Points Table • Teams
+  </p>
+
+</div>
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+  <input type="text"
+  placeholder="Search teams, players, scores...">
+
+</div>
+
+<!-- LIVE MATCH -->
+
+<div class="live-card">
+
+  <div class="live-title">
+
+    <div class="dot"></div>
+
+    LIVE MATCH
+
+  </div>
+
+  <div class="match">
+
+    <h2>
+      💛 CSK vs ❤️ RCB
+    </h2>
+
+    <div class="score">
+      CSK 178/4
+    </div>
+
+    <p>
+      18.2 Overs • Target 201
+    </p>
+
+  </div>
+
+  <div class="required">
+
+    🔥 CSK need 23 runs from 10 balls
+
+  </div>
+
+</div>
+
+
+<!-- COMMENTARY -->
+
+<div class="comment-box">
+
+  <h2 class="comment-title">
+    📡 LIVE COMMENTARY
+  </h2>
+
+  <div class="comments">
+    <p>CSK Whistle podu</p>
+
+    <p>kohliiiiii...</p>
+
+    <p>🔥 18.2 - Dhoni smashes a HUGE SIX over long-on!</p>
+
+    <p>⚡ 18.1 - Siraj bowls a yorker, single taken.</p>
+
+    <p>🚀 Crowd chanting "Dhoni Dhoni" inside Chepauk.</p>
+
+    <p>💥 Jadeja hits FOUR through covers.</p>
+
+    <p>🔴 RCB feeling pressure now.</p>
+
+    <p>🎯 Brilliant slower ball by Siraj.</p>
+
+    <p>🏏 Dube takes quick double.</p>
+
+    <p>⚡ Kohli almost grabs stunning catch.</p>
+
+  </div>
+
+</div>
+<!-- LIVE MATCH STATUS -->
+
+<div class="status-box">
+
+  <h1>
+    23 RUNS • 10 BALLS
+  </h1>
+
+  <p>
+    🔴 LIVE NOW • CSK Batting • 18.2 Overs
+  </p>
+
+</div>
+
+<!-- POPULAR TEAMS -->
+
+<h2 class="section-title">🔥 Popular Teams</h2>
+
+<div class="shop">
+
+  <!-- CSK -->
+  <div class="card">
+
+    <img src="https://documents.iplt20.com/ipl/CSK/Logos/Logooutline/CSKoutline.png">
+
+    <h3>
+      Chennai Super Kings
+    </h3>
+
+    <p>
+      💛 Captain Cool Team
+    </p>
+
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ 4.9
+    </div>
+
+  </div>
+
+  <!-- RCB -->
+  <div class="card">
+
+    <img src="https://documents.iplt20.com/ipl/RCB/Logos/Logooutline/RCBoutline.png">
+
+    <h3>
+      Royal Challengers Bangalore
+    </h3>
+
+    <p>
+      🔥 King Kohli Fans
+    </p>
+
+    <div class="rating">
+      ⭐⭐⭐⭐☆ 4.7
+    </div>
+
+  </div>
+
+  <!-- MI -->
+  <div class="card">
+
+    <img src="https://documents.iplt20.com/ipl/MI/Logos/Logooutline/MIoutline.png">
+
+    <h3>
+      Mumbai Indians
+    </h3>
+
+    <p>
+      🔵 Hitman Squad
+    </p>
+
+    <div class="rating">
+      ⭐⭐⭐⭐⭐ 4.8
+    </div>
+
+  </div>
+
+</div>
+<!-- WINNING PREDICTION -->
+
+<div class="poll">
+
+  <h2 style="color:#ffd700;">
+    📊 Winning Prediction
+  </h2>
+
+  <br>
+
+  <div style="
+    width:90%;
+    height:28px;
+    background:rgba(255,255,255,0.1);
+    border-radius:30px;
+    margin:auto;
+    overflow:hidden;
+  ">
+
+    <!-- CSK -->
+    <div style="
+      width:72%;
+      height:100%;
+      background:#ffd700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      color:black;
+      float:left;
+    ">
+      💛 CSK - 86%
+    </div>
+
+    <!-- RCB -->
+    <div style="
+      width:28%;
+      height:100%;
+      background:red;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      color:white;
+      float:left;
+    ">
+      ❤️ RCB - 49%
+    </div>
+
+  </div>
+
+</div>
+<!-- PITCH REPORT -->
+
+<div class="live-card">
+
+  <div class="live-title">
+
+    <div class="dot"></div>
+
+    PITCH REPORT
+
+  </div>
+
+  <div style="
+    text-align:center;
+    margin-top:20px;
+  ">
+
+    <h2 style="
+      color:#ffd700;
+      font-size:35px;
+    ">
+      Batting Friendly Pitch
+    </h2>
+
+    <p style="
+      margin-top:15px;
+      font-size:18px;
+      opacity:0.85;
+    ">
+      Good bounce and short boundaries.  
+      High scoring match expected tonight 🔥
+    </p>
+
+  </div>
+
+</div>
+<!-- TEAM COMPARISON -->
+
+<div class="points">
+
+  <h2 style="
+    text-align:center;
+    color:#ffd700;
+  ">
+     TEAM COMPARISON
+  </h2>
+
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:30px;
+  ">
+
+    <!-- CSK -->
+    <div style="
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:20px;
+      width:260px;
+      text-align:center;
+    ">
+
+      <h1 style="
+        color:#ffd700;
+        font-size:35px;
+      ">
+        💛 CSK
+      </h1>
+
+      <h2 style="
+        margin-top:15px;
+        font-size:50px;
+      ">
+        22
+      </h2>
+
+      <p style="
+        margin-top:10px;
+        opacity:0.8;
+      ">
+        Total Wins
+      </p>
+
+    </div>
+
+    <!-- VS -->
+    <h1 style="
+      color:red;
+      font-size:50px;
+    ">
+      VS
+    </h1>
+
+    <!-- RCB -->
+    <div style="
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:20px;
+      width:260px;
+      text-align:center;
+    ">
+
+      <h1 style="
+        color:#ff4d4d;
+        font-size:35px;
+      ">
+        ❤️ RCB
+      </h1>
+
+      <h2 style="
+        margin-top:15px;
+        font-size:50px;
+      ">
+        11
+      </h2>
+
+      <p style="
+        margin-top:10px;
+        opacity:0.8;
+      ">
+        Total Wins
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- POINTS TABLE -->
+
+<div class="points">
+
+  <h2>
+    🏆 IPL POINTS TABLE
+  </h2>
+
+  <table>
+
+    <tr>
+      <th>TEAM</th>
+      <th>M</th>
+      <th>W</th>
+      <th>L</th>
+      <th>PTS</th>
+    </tr>
+
+    <tr class="leader">
+      <td>CSK 👑</td>
+      <td>10</td>
+      <td>8</td>
+      <td>2</td>
+      <td>16</td>
+    </tr>
+
+    <tr>
+      <td>MI</td>
+      <td>10</td>
+      <td>7</td>
+      <td>3</td>
+      <td>14</td>
+    </tr>
+
+    <tr>
+      <td>RCB</td>
+      <td>10</td>
+      <td>6</td>
+      <td>4</td>
+      <td>12</td>
+    </tr>
+
+    <tr>
+      <td>KKR</td>
+      <td>10</td>
+      <td>5</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+
+  </table>
+  <!-- UPCOMING MATCH SECTION -->
+
+<div class="live-card">
+
+  <div class="live-title">
+
+    <div class="dot"></div>
+
+    UPCOMING MATCH
+
+  </div>
+
+  <div class="match">
+
+    <h2>
+      🔵 MI vs 🟣 KKR
+    </h2>
+    
+
+    <div class="score" style="font-size:40px;">
+      Tomorrow
+    </div>
+
+    <p>
+      🕢 7:30 PM IST
+    </p>
+
+    <p style="margin-top:10px;">
+      🏟️ Wankhede Stadium
+    </p>
+
+  </div>
+
+</div>
+
+</div>
+<!-- STADIUM MUSIC -->
+
+<div class="music-box">
+
+  <p>Currently Playing : Whistle Podu</p>
+
+</div>
+
+<!-- FAN POLL -->
+
+<div class="poll">
+
+  <h2 style="color:#ffd700;">
+    📊 WHO WILL WIN TODAY?
+  </h2>
+
+  <br>
+
+  <button class="csk">
+    💛 CSK
+  </button>
+
+  <button class="rcb">
+    ❤️ RCB
+  </button>
+
+</div>
+<!-- STADIUM & WEATHER INFO -->
+
+<div class="live-card">
+
+  <div class="live-title">
+
+    <div class="dot"></div>
+
+    STADIUM & WEATHER
+
+  </div>
+
+  <div style="
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:25px;
+  ">
+
+    <!-- STADIUM -->
+
+    <div style="
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      width:320px;
+      border-radius:18px;
+      text-align:center;
+    ">
+
+      <h1 style="
+        color:#ffd700;
+        font-size:28px;
+      ">
+        🏟️ Stadium
+      </h1>
+
+      <h2 style="
+        margin-top:18px;
+        font-size:26px;
+      ">
+        M. A. Chidambaram Stadium
+      </h2>
+
+      <p style="
+        margin-top:10px;
+        opacity:0.8;
+        font-size:18px;
+      ">
+        📍 Chepauk, Chennai
+      </p>
+
+    </div>
+
+    <!-- WEATHER -->
+
+    <div style="
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      width:320px;
+      border-radius:18px;
+      text-align:center;
+    ">
+
+      <h1 style="
+        color:#00ffcc;
+        font-size:28px;
+      ">
+        🌤️ Weather
+      </h1>
+
+      <h2 style="
+        margin-top:18px;
+        font-size:45px;
+      ">
+        31°C
+      </h2>
+
+      <p style="
+        margin-top:12px;
+        font-size:18px;
+      ">
+        💧 Humidity : 62%
+      </p>
+
+      <p style="
+        margin-top:8px;
+        font-size:18px;
+      ">
+        🌧️ Rain : 5%
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+<div class="highlight-box">
+
+  <h2> Match Highlights</h2>
+
+  <button class="highlight-btn">
+       ▶ Watch Highlights
+  </button>
+
+</div>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/919876543210">
+
+💬 Chat
+
+</a>
+
+<!-- FOOTER -->
+
+<footer>
+
+  © 2026 IPL LIVE DASHBOARD 🏏
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+    margin:0;
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.glass{
+    width:300px;
+    height:200px;
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.3);
+
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
