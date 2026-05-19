@@ -102,3 +102,6 @@ def shop(request):
 
 def fashioncontact(request):
     return render(request, "fashioncontact.html")
+
+def mediaquery(request):
+    return render(request, 'mediaquery.html')

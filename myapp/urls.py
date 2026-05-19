@@ -30,5 +30,6 @@ urlpatterns = [
     path('fashion/', views.fashion, name='fashion'),
     path('shop/', views.shop, name='shop'),
     path('fashioncontact/', views.fashioncontact, name='fashioncontact'),
+    path('mediaquery/', views.mediaquery, name='mediaquery'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

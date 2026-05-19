@@ -9,7 +9,6 @@
     <title>Fashion Store</title>
 
     <!-- Bootstrap -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -108,335 +107,291 @@
             color:gray;
         }
 
+        /* ---------------- MEDIA QUERY ---------------- */
+
+        @media (max-width: 992px) {
+
+            .hero{
+                padding:70px 0;
+                text-align:center;
+            }
+
+            .hero h1{
+                font-size:45px;
+            }
+
+            .card img{
+                height:300px;
+            }
+        }
+
+      
+        @media (max-width: 768px) {
+
+            .hero{
+                padding:50px 0;
+                text-align:center;
+            }
+
+            .hero h1{
+                font-size:32px;
+            }
+
+            .hero p{
+                font-size:16px;
+            }
+
+            .navbar-brand{
+                font-size:24px;
+            }
+
+            .card img{
+                height:150px;
+            }
+
+            .shop-btn{
+                padding:10px 20px;
+                font-size:14px;
+            }
+
+            .hero .row{
+                text-align:center;
+            }
+        }
+
+        /* Small mobile */
+        @media (max-width:px) {
+
+            .hero h1{
+                font-size:26px;
+            }
+
+            .hero p{
+                font-size:14px;
+            }
+
+            .card img{
+                height:100px;
+            }
+
+            .offer h1{
+                font-size:22px;
+            }
+        }
+
     </style>
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm py-3">
 
-    <nav class="navbar navbar-expand-lg shadow-sm py-3">
+    <div class="container">
 
-        <div class="container">
+        <a class="navbar-brand" href="#">
+            MODERN CLOTHS
+        </a>
 
-            <a class="navbar-brand" href="#">
-                MODERN CLOTHS
-            </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="collapse navbar-collapse" id="menu">
 
-            <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
 
-                <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SHOP</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">COLLECTION</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
-                    </li>
+            </ul>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SHOP</a>
-                    </li>
+            <button class="btn btn-dark">SHOP NOW</button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">COLLECTION</a>
-                    </li>
+        </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
-                    </li>
+    </div>
 
-                </ul>
+</nav>
 
-                <button class="btn btn-dark">
-                    SHOP NOW
-                </button>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 text-center text-lg-start">
+
+                <h1>New Fashion Collection 2026</h1>
+
+                <p>Discover stylish dresses and modern outfits for every season.</p>
+
+                <button class="shop-btn">Explore Collection</button>
+
+            </div>
+
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+                class="img-fluid rounded">
 
             </div>
 
         </div>
 
-    </nav>
+    </div>
+
+</section>
 
 
-    <!-- HOME PAGE -->
+<!-- PRODUCTS -->
+<section class="container py-5">
 
-    <section class="hero">
+    <h2 class="text-center mb-5">Trending Dresses</h2>
 
-        <div class="container">
+    <div class="row g-4">
 
-            <div class="row align-items-center">
-
-                <div class="col-lg-6">
-
-                    <h1>
-                        New Fashion Collection 2026
-                    </h1>
-
-                    <p>
-                        Discover stylish dresses and modern outfits for every season.
-                    </p>
-
-                    <button class="shop-btn">
-                        Explore Collection
-                    </button>
-
+        <!-- card 1 -->
+        <div class="col-md-3 col-6">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Women Dress</h5>
+                    <p>₹1499</p>
                 </div>
+            </div>
+        </div>
 
-                <div class="col-lg-6 text-center">
-
-                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
-                    class="img-fluid rounded">
-
+        <!-- card 2 -->
+        <div class="col-md-3 col-6">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Modern Outfit</h5>
+                    <p>₹1999</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="col-md-3 col-6">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Luxury Collection</h5>
+                    <p>₹2499</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="col-md-3 col-6">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Casual Wear</h5>
+                    <p>₹1799</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER -->
+<section class="offer">
+
+    <div class="container">
+
+        <h1>50% OFF Summer Sale</h1>
+        <p class="mt-3">Limited Time Offer</p>
+
+        <button class="btn btn-light mt-3 px-4">Shop Sale</button>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <h2>Contact Us</h2>
+                <p class="mt-4">📍 Madurai, Tamil Nadu</p>
+                <p>📞 +91 9876543210</p>
+                <p>📧 fashionstore@gmail.com</p>
+            </div>
+
+            <div class="col-lg-6">
+
+                <form>
+                    <input type="text" class="form-control mb-3" placeholder="Your Name">
+                    <input type="email" class="form-control mb-3" placeholder="Your Email">
+                    <textarea rows="5" class="form-control mb-3" placeholder="Your Message"></textarea>
+                    <button class="btn btn-dark">Send Message</button>
+                </form>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- PRODUCTS -->
+<!-- FOOTER -->
+<section class="footer">
 
-    <section class="container py-5">
+    <div class="container">
 
-        <h2 class="text-center mb-5">
-            Trending Dresses
-        </h2>
+        <div class="row">
 
-        <div class="row g-4">
-
-            <div class="col-md-3">
-
-                <div class="card">
-
-                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
-                    class="card-img-top">
-
-                    <div class="card-body text-center">
-
-                        <h5>Women Dress</h5>
-
-                        <p>₹1499</p>
-
-                    </div>
-
-                </div>
-
+            <div class="col-md-4">
+                <h3>MODERN CLOTHS</h3>
+                <p class="mt-3">Premium fashion store with stylish collections.</p>
             </div>
 
-
-            <div class="col-md-3">
-
-                <div class="card">
-
-                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
-                    class="card-img-top">
-
-                    <div class="card-body text-center">
-
-                        <h5>Modern Outfit</h5>
-
-                        <p>₹1999</p>
-
-                    </div>
-
-                </div>
-
+            <div class="col-md-4">
+                <h4>Quick Links</h4>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Collection</a>
+                <a href="#">Contact</a>
             </div>
 
-
-            <div class="col-md-3">
-
-                <div class="card">
-
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
-                    class="card-img-top">
-
-                    <div class="card-body text-center">
-
-                        <h5>Luxury Collection</h5>
-
-                        <p>₹2499</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-md-3">
-
-                <div class="card">
-
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
-                    class="card-img-top">
-
-                    <div class="card-body text-center">
-
-                        <h5>Casual Wear</h5>
-
-                        <p>₹1799</p>
-
-                    </div>
-
-                </div>
-
+            <div class="col-md-4">
+                <h4>Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
             </div>
 
         </div>
 
-    </section>
+        <hr class="mt-4">
+
+        <p class="text-center">© 2026 MODERN CLOTHS | All Rights Reserved</p>
+
+    </div>
+
+</section>
 
 
-    <!-- OFFER -->
-
-    <section class="offer">
-
-        <div class="container">
-
-            <h1>
-                50% OFF Summer Sale
-            </h1>
-
-            <p class="mt-3">
-                Limited Time Offer
-            </p>
-
-            <button class="btn btn-light mt-3 px-4">
-                Shop Sale
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT PAGE -->
-
-    <section class="contact-section">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-6">
- 
-                    <h2>
-                        Contact Us
-                    </h2>
-
-                    <p class="mt-4">
-                        📍 Madurai, Tamil Nadu
-                    </p>
-
-                    <p>
-                        📞 +91 9876543210
-                    </p>
-
-                    <p>
-                        📧 fashionstore@gmail.com
-                    </p>
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <form>
-
-                        <input type="text"
-                        class="form-control mb-3"
-                        placeholder="Your Name">
-
-                        <input type="email"
-                        class="form-control mb-3"
-                        placeholder="Your Email">
-
-                        <textarea rows="5"
-                        class="form-control mb-3"
-                        placeholder="Your Message"></textarea>
-
-                        <button class="btn btn-dark">
-                            Send Message
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <section class="footer">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-4">
-
-                    <h3>
-                        MODERN CLOTHS
-                    </h3>
-
-                    <p class="mt-3">
-                        Premium fashion store with stylish collections.
-                    </p>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <h4>
-                        Quick Links
-                    </h4>
-
-                    <a href="#">Home</a>
-                    <a href="#">Shop</a>
-                    <a href="#">Collection</a>
-                    <a href="#">Contact</a>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <h4>
-                        Follow Us
-                    </h4>
-
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-
-                </div>
-
-            </div>
-
-            <hr class="mt-4">
-
-            <p class="text-center">
-                © 2026 MODERN CLOTHS | All Rights Reserved
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
